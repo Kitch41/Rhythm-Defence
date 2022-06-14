@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordPosition : MonoBehaviour
+public class DeathBoxScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,19 +16,19 @@ public class SwordPosition : MonoBehaviour
         //Move the sword to a set of coordinates
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-                    transform.position = new Vector3(-34, 0, -278);
+                    transform.position = new Vector3(-34, 3, -278);
                 }
                 if (Input.GetKeyDown(KeyCode.S))
                 {
-                    transform.position = new Vector3(0, 0, -296);
+                    transform.position = new Vector3(-11, 3, -278);
                 }
                 if (Input.GetKeyDown(KeyCode.D))
                 {
-                    transform.position = new Vector3(30,0, -296);
+                    transform.position = new Vector3(13, 3, -278);
                 }
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    transform.position = new Vector3(30,0, -296);
+                    transform.position = new Vector3(33, 3, -278);
                 }
 
 
@@ -49,11 +49,9 @@ public class SwordPosition : MonoBehaviour
                     transform.position = new Vector3(0, 0, -350);
                 }
 
-        //Destroy objects
-        private void OnTriggerEnter(Collider Death)
-        {
-                Destroy(Death.gameObject);
-        }
-
+    }
+    private void OnTriggerEnter(Collider Death)
+    {
+        Destroy(Death.gameObject);
     }
 }
