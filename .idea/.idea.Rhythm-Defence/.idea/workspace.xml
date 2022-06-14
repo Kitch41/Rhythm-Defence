@@ -16,6 +16,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Game Stuff/Scripts/PortalSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -79,6 +82,7 @@
       <updated>1654862057737</updated>
       <workItem from="1654862072028" duration="3814000" />
       <workItem from="1655104556692" duration="20000" />
+      <workItem from="1655104665983" duration="3800000" />
     </task>
     <servers />
   </component>
