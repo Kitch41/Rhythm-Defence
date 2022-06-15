@@ -18,7 +18,7 @@ public class PortalSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentTimeToSpawn < 0)
+        if (currentTimeToSpawn > 0)
         {
             currentTimeToSpawn -= Time.deltaTime;
         }
