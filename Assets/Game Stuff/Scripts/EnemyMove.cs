@@ -21,7 +21,7 @@ public class EnemyMove : MonoBehaviour
     void Update()
     {
 		//transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
-		transform.position -= transform.forward * speedModifier * Time.deltaTime;
+		transform.position -= transform.forward * (speedModifier * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision col)
