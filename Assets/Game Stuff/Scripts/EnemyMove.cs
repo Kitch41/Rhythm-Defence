@@ -12,12 +12,12 @@ public class EnemyMove : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start()
-    {
-		speedModifier = speedModifier / 60f;
+	{
+		speedModifier = 10f;
 
 	}
 
-    // Update is called once per frame
+	// Update is called once per frame
     void Update()
     {
 		//transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
