@@ -8,18 +8,20 @@ public class EnemyMove : MonoBehaviour
 	[HideInInspector] public bool inOrange = false;
 	[HideInInspector] public bool inRed = false;
 
-	[SerializeField] [Range(-0.5f, 0)]private float speedModifier = -0.05f;
+	public float speedModifier;
 
 	// Start is called before the first frame update
 	void Start()
     {
+		speedModifier = speedModifier / 60f;
 
-    }
+	}
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * speedModifier;
+		//transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
+		transform.position -= transform.forward * speedModifier * Time.deltaTime;
     }
 
     void OnCollisionEnter(Collision col)
