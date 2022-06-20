@@ -15,29 +15,29 @@ public class DeathBox3Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.position = new Vector3(13, 3, -278);
+            transform.position = new Vector3(51.1f, -2.5f, -111.3f);
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.position = new Vector3(13, 3, -278);
+            transform.position = new Vector3(51.1f, -2.5f, -111.3f);
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            transform.position = new Vector3(13, 3, -278);
+            transform.position = new Vector3(51.1f, -2.5f, -111.3f);
         }
 
 
         if (Input.GetKeyUp(KeyCode.D))
         {
-            transform.position = new Vector3(0, 0, -350);
+            transform.position = new Vector3(51.1f, -2.5f, -350);
         }
         if (Input.GetKeyUp(KeyCode.J))
         {
-            transform.position = new Vector3(0, 0, -350);
+            transform.position = new Vector3(51.1f, -2.5f, -350);
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            transform.position = new Vector3(0, 0, -350);
+            transform.position = new Vector3(51.1f, -2.5f, -350);
         }
 
     }

@@ -16,12 +16,12 @@ public class DeathBox1Script : MonoBehaviour
         //Move the DestroyBox to a set of coordinates
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-                    transform.position = new Vector3(-34, 3, -278);
+                    transform.position = new Vector3(-6.7f, -2.5f, -111.3f);
                 }
   
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    transform.position = new Vector3(-34, 3, -278);
+                    transform.position = new Vector3(-6.7f, -2.5f, -111.3f);
                 }
                 
 
@@ -30,12 +30,12 @@ public class DeathBox1Script : MonoBehaviour
 
                 if (Input.GetKeyUp(KeyCode.A))
                 {
-                    transform.position = new Vector3(0, 0, -350);
+                    transform.position = new Vector3(-6.7f, -2.5f, -350);
                 }
                 
                 if (Input.GetKeyUp(KeyCode.LeftArrow))
                 {
-                    transform.position = new Vector3(0, 0, -350);
+                    transform.position = new Vector3(-6.7f, -2.5f, -350);
                 }
 
     }

@@ -16,23 +16,23 @@ public class DeathBox2Script : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            transform.position = new Vector3(-11, 3, -278);
+            transform.position = new Vector3(20.8f, -2.5f, -111.3f);
         }
 
         
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.position = new Vector3(-11, 3, -278);
+            transform.position = new Vector3(20.8f, -2.5f, -111.3f);
         }
  
       
         if (Input.GetKeyUp(KeyCode.S))
         {
-            transform.position = new Vector3(0, 0, -350);
+            transform.position = new Vector3(20.8f, -2.5f, -350f);
         }
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            transform.position = new Vector3(0, 0, -350);
+            transform.position = new Vector3(20.8f, -2.5f, -350f);
         }
         
 
