@@ -6,6 +6,9 @@ public class DeathBox2Script : MonoBehaviour
 {
 
     [SerializeField] ComboScript combo;
+    private bool isActive = false;
+    private float timer;
+    private float maxTime = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,27 +20,24 @@ public class DeathBox2Script : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.position = new Vector3(382.926f, 0.46f, 90.15001f);
+            isActive = true;
         }
 
-        
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (isActive)
         {
             transform.position = new Vector3(382.926f, 0.46f, 90.15001f);
+            timer += Time.deltaTime;
+
+            if (timer > maxTime)
+            {
+                timer = 0;
+                transform.position = new Vector3(400f, 0.46f, 90.15001f);
+                isActive = false;
+            }
         }
- 
-      
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            transform.position = new Vector3(400f, 0.46f, 90.15001f);
-        }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            transform.position = new Vector3(400f, 0.46f, 90.15001f);
-        }
-        
+
 
     }
     private void OnTriggerEnter(Collider Death)

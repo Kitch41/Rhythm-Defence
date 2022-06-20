@@ -6,6 +6,9 @@ public class DeathBox3Script : MonoBehaviour
 {
 
     [SerializeField] ComboScript combo;
+    private bool isActive = false;
+    private float timer;
+    private float maxTime = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,31 +19,22 @@ public class DeathBox3Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.J))
         {
-            transform.position = new Vector3(382.926f, 0.46f, 93.18001f);
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            transform.position = new Vector3(382.926f, 0.46f, 93.18001f);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            transform.position = new Vector3(382.926f, 0.46f, 93.18001f);
+            isActive = true;
         }
 
+        if (isActive)
+        {
+            transform.position = new Vector3(382.926f, 0.46f, 93.18001f);
+            timer += Time.deltaTime;
 
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            transform.position = new Vector3(400f, 0.46f, 93.18001f);
-        }
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            transform.position = new Vector3(400f, 0.46f, 93.18001f);
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            transform.position = new Vector3(400f, 0.46f, 93.18001f);
+            if (timer > maxTime)
+            {
+                timer = 0;
+                transform.position = new Vector3(400f, 0.46f, 93.18001f);
+                isActive = false;
+            }
         }
 
     }
