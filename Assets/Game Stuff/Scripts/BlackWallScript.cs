@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BlackWallScript : MonoBehaviour
 {
-    
+    [SerializeField] LivesScript lives;
+    [SerializeField] ComboScript combo;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,9 @@ public class BlackWallScript : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+        lives.TakeDamage(1);
+        combo.LoseCombo();
+
 		Destroy(other.gameObject);
 	}
 }

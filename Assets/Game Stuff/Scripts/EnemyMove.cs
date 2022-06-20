@@ -8,11 +8,14 @@ public class EnemyMove : MonoBehaviour
 	[HideInInspector] public bool inOrange = false;
 	[HideInInspector] public bool inRed = false;
 
+	PointsScript points;
+
 	public float speedModifier;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		points = GameObject.Find("PointText").GetComponent<PointsScript>();
 		speedModifier = speedModifier * 10f;
 
 	}
@@ -24,28 +27,20 @@ public class EnemyMove : MonoBehaviour
 		transform.position -= transform.forward * (speedModifier * Time.deltaTime);
     }
 
-    void OnCollisionEnter(Collision col)
-	{
-		if (col.gameObject.name == "Sword")
-		{
-            Destroy(gameObject);
-		}
-	}
-
-    private void OnDeath()
+    public void OnDeath()
 	{
 		//Add points depending on color...
 		if (inGreen)
 		{
-			//Add 20 points
+			points.GetPoints(20);
 		}
 		else if (inOrange)
 		{
-			//Add 10 points
+			points.GetPoints(10);
 		}
 		else if (inRed)
 		{
-			//Add 5 points
+			points.GetPoints(5);
 		}
 	}
 }
