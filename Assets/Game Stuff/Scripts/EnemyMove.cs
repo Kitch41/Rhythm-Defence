@@ -13,7 +13,7 @@ public class EnemyMove : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		speedModifier = 10f;
+		speedModifier = speedModifier * 10f;
 
 	}
 

@@ -18,6 +18,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Game Stuff/Scripts/PortalSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game Stuff/Scripts/tutorialPortal.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,6 +84,9 @@
       <workItem from="1654862072028" duration="3814000" />
       <workItem from="1655104556692" duration="20000" />
       <workItem from="1655104665983" duration="4855000" />
+      <workItem from="1655335775506" duration="79000" />
+      <workItem from="1655394919931" duration="1199000" />
+      <workItem from="1655714447908" duration="642000" />
     </task>
     <servers />
   </component>

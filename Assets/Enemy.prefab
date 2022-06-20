@@ -132,7 +132,7 @@ MonoBehaviour:
   inGreen: 0
   inOrange: 0
   inRed: 0
-  speedModifier: -0.05
+  speedModifier: 3
 --- !u!65 &3778502769159077458
 BoxCollider:
   m_ObjectHideFlags: 0
