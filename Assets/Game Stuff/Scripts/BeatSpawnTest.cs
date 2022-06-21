@@ -7,11 +7,15 @@ public class BeatSpawnTest : MonoBehaviour
     float timeLastFrame = 0;
     float deltaTime = 10;
 
-    float speed = 0;
+    //float speed = 0;
 
     public AudioSource musicAudioSource;
-    public GameObject objectToInstantiate;
-    private readonly float timeFromPlayer;
+    public GameObject objectToSpawn;
+    
+    void Start()
+    {
+        InvokeRepeating("SpawnObject", 3.0f, 0.345f);
+    }
 
     void Update()
     {
@@ -22,16 +26,12 @@ public class BeatSpawnTest : MonoBehaviour
 
         // Move forward at your speed based on how much time has passed in the music
         //transform.position += Vector3.forward * speed * deltaTime;
-
         
+
     }
 
-    void MakeObject(float timeFromPlayer)
+     void SpawnObject()
     {
-        // Make a new object
-        GameObject newObj = Instantiate(objectToInstantiate) as GameObject;
-
-        // Place the new object a specific distance from the player so it takes "timeFromPlayer" seconds to reach the object
-        newObj.transform.position = transform.position + Vector3.left * speed * timeFromPlayer;
+        Instantiate(objectToSpawn, transform.position, transform.rotation);
     }
 }
