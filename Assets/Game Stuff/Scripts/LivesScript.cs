@@ -22,19 +22,34 @@ public class LivesScript : MonoBehaviour
 		if (lives <= 0)
 		{
             lives = 0;
-            endPanel.SetActive(true);
-            portal1.SetActive(false);
-            portal2.SetActive(false);
-            portal3.SetActive(false);
-            portal4.SetActive(false);
         }
 
 		text.text = "Lives: " + lives;
+	}
+
+	public void EndGame()
+	{
+		if (lives <= 0)
+		{
+			endPanel.SetActive(true);
+			portal1.SetActive(false);
+			portal2.SetActive(false);
+			portal3.SetActive(false);
+		}
 	}
 
 	public void Start()
 	{
 		text = GetComponent<TextMeshProUGUI>();
 		text.text = "Lives: " + lives;
+		endPanel.SetActive(false);
+		portal1.SetActive(true);
+		portal2.SetActive(true);
+		portal3.SetActive(true);
+	}
+
+	public void Update()
+	{
+		EndGame();
 	}
 }
