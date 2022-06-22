@@ -46,9 +46,7 @@ public class PortalSpawn : MonoBehaviour
                 SpawnObject();
                 currentTimeToSpawn = timeToSpawn;
             }
-            //Debug.Log("Oh shit");
         }
-        
     }
 
     public void SpawnObject()

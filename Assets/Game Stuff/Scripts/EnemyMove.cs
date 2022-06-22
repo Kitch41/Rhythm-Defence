@@ -36,11 +36,11 @@ public class EnemyMove : MonoBehaviour
 		}
 		else if (inOrange)
 		{
-			points.GetPoints(10);
+			points.GetPoints(5);
 		}
 		else if (inRed)
 		{
-			points.GetPoints(5);
+			points.GetPoints(0);
 		}
 	}
 }
