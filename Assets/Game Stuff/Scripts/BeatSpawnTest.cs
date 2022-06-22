@@ -7,14 +7,16 @@ public class BeatSpawnTest : MonoBehaviour
     float timeLastFrame = 0;
     float deltaTime = 10;
 
+
     //float speed = 0;
 
     public AudioSource musicAudioSource;
+    public GameObject[] spawnPoints;
     public GameObject objectToSpawn;
     
     void Start()
     {
-        InvokeRepeating("SpawnObject", 3.0f, 0.345f);
+        InvokeRepeating("SpawnObject", 3.0f, 0.429f);
     }
 
     void Update()
@@ -30,8 +32,20 @@ public class BeatSpawnTest : MonoBehaviour
 
     }
 
-     void SpawnObject()
+    private void Awake()
     {
-        Instantiate(objectToSpawn, transform.position, transform.rotation);
+        spawnPoints = GameObject.FindGameObjectsWithTag("spawnPoint");
+
     }
+
+    public void SpawnObject()
+    {
+
+       
+            int spawn = Random.Range(0, spawnPoints.Length);
+            Instantiate(objectToSpawn, spawnPoints[spawn].transform.position, spawnPoints[spawn].transform.rotation);
+        
+    }
+
+    
 }

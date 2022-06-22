@@ -7,7 +7,8 @@ public class SpectrumSpawn : MonoBehaviour
 {
     public GameObject objectToSpawn;
     public AudioMixer muteTicks;
-    public AudioSource ticks;
+    public AudioSource finalVersion;
+    public AudioListener lowPrio;
     
 
 
@@ -17,8 +18,9 @@ public class SpectrumSpawn : MonoBehaviour
 
      void Start()
     {
-
+        finalVersion.Play(0);
         muteTicks.SetFloat("muteVolume", -50);
+        
         
     }
 
@@ -33,6 +35,7 @@ public class SpectrumSpawn : MonoBehaviour
         
             float[] spectrum = new float[256];
             AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+        
 
         for (int i = 0; i < spectrum.Length; i++)
         {
