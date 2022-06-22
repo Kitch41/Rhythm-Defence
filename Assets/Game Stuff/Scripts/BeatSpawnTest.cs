@@ -16,7 +16,7 @@ public class BeatSpawnTest : MonoBehaviour
     
     void Start()
     {
-        InvokeRepeating("SpawnObject", 3.0f, 0.429f);
+        InvokeRepeating("SpawnObject", 22.0f, 0.429f);
     }
 
     void Update()

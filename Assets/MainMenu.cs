@@ -15,7 +15,17 @@ public class MainMenu : MonoBehaviour
 		SceneManager.LoadScene("Level01");
 	}
 
-	public void QuitGame ()
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("levelSheet");
+    }
+
+    public void BacktoMain()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
+    public void QuitGame ()
 	{
 		Debug.Log("Quit Game");
 		Application.Quit();
