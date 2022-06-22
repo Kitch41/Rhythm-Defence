@@ -20,6 +20,7 @@ public class PointsScript : MonoBehaviour
 	{
 		pointstext = GetComponent<TextMeshProUGUI>();
 		pointstext.text = "Points: " + points;
+		points = PlayerPrefs.GetInt("Points");
 	}
 
  

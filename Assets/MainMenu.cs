@@ -12,10 +12,15 @@ public class MainMenu : MonoBehaviour
 
 	public void PlayLevel01()
 	{
+		SceneManager.LoadScene("LevelSheet");
+	}
+
+	public void PlayLevelTutorial()
+	{
 		SceneManager.LoadScene("Level01");
 	}
 
-    public void RestartLevel()
+	public void RestartLevel()
     {
         SceneManager.LoadScene("levelSheet");
     }

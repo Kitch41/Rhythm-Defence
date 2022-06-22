@@ -11,6 +11,7 @@ public class EnemyMove : MonoBehaviour
 	PointsScript points;
 
 	public float speedModifier;
+	public GameObject HitBlood;
 
 	// Start is called before the first frame update
 	void Start()
